@@ -1,0 +1,221 @@
+<html>
+<head>
+    <title>Painel Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="w-64 bg-gray-900 h-screen">
+            <div class="p-4">
+                <div class="text-white text-2xl font-bold mb-4">PAINEL</div>
+                <nav class="text-gray-300">
+                    <ul>
+                        <li class="mb-4">
+                            <a href="#" class="flex items-center text-white">
+                                <i class="fas fa-home mr-3"></i>Inicio
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <span class="text-gray-500 uppercase text-xs">Ferramentas</span>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="flex items-center">
+                                <i class="fas fa-tv mr-3"></i>Novos Canais
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="flex items-center">
+                                <i class="fas fa-film mr-3"></i>Novos Filmes
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="flex items-center">
+                                <i class="fas fa-video mr-3"></i>Novas Series
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <span class="text-gray-500 uppercase text-xs">IPTV</span>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="flex items-center">
+                                <i class="fas fa-users mr-3"></i>Usuários
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="flex items-center">
+                                <i class="fas fa-user-check mr-3"></i>Testes
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="flex items-center">
+                                <i class="fas fa-bolt mr-3"></i>Teste Rápido
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="flex items-center">
+                                <i class="fas fa-signal mr-3"></i>Linhas Online
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <span class="text-gray-500 uppercase text-xs">Suporte</span>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="flex items-center">
+                                <i class="fas fa-comments mr-3"></i>Chat Online
+                                <span class="ml-auto bg-red-500 text-white text-xs rounded-full px-2 py-1">2</span>
+                            </a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="flex items-center">
+                                <i class="fas fa-envelope mr-3"></i>Tickets
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="flex-1 p-6">
+            <h1 class="text-3xl font-bold mb-6">Dashboard</h1>
+            <div class="grid grid-cols-4 gap-6 mb-6">
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <div class="flex items-center">
+                        <div class="flex-1">
+                            <h2 class="text-gray-600">Usuários Ativos</h2>
+                            <p class="text-2xl font-bold">200</p>
+                        </div>
+                        <div class="text-blue-500">
+                            <i class="fas fa-user fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <div class="flex items-center">
+                        <div class="flex-1">
+                            <h2 class="text-gray-600">Usuários Testes</h2>
+                            <p class="text-2xl font-bold">39</p>
+                        </div>
+                        <div class="text-orange-500">
+                            <i class="fas fa-users fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <div class="flex items-center">
+                        <div class="flex-1">
+                            <h2 class="text-gray-600">Usuários Online</h2>
+                            <p class="text-2xl font-bold">150</p>
+                        </div>
+                        <div class="text-green-500">
+                            <i class="fas fa-circle fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <div class="flex items-center">
+                        <div class="flex-1">
+                            <h2 class="text-gray-600">Saldo a Pagar (Prox. Cobrança)</h2>
+                            <p class="text-2xl font-bold">R$ 260,00</p>
+                        </div>
+                        <div class="text-purple-500">
+                            <i class="fas fa-dollar-sign fa-2x"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-6 mb-6">
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h2 class="text-gray-600 mb-4">DNS do Servidor</h2>
+                    <div class="flex items-center">
+                        <input type="text" class="flex-1 p-2 border rounded" value="http://m3u.teste/" readonly>
+                        <button class="ml-2 text-gray-500">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h2 class="text-gray-600 mb-4">WebTV Player</h2>
+                    <div class="flex items-center">
+                        <input type="text" class="flex-1 p-2 border rounded" value="http://teste/live.php" readonly>
+                        <button class="ml-2 text-gray-500">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-6 mb-6">
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h2 class="text-gray-600 mb-4">Linhas a Expirar</h2>
+                    <div class="flex items-center mb-4">
+                        <label for="mostrar" class="mr-2">Mostrar</label>
+                        <input type="number" id="mostrar" class="p-2 border rounded w-16" value="5">
+                        <input type="text" class="ml-auto p-2 border rounded" placeholder="Buscar">
+                    </div>
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr>
+                                <th class="border-b p-2">Usuário</th>
+                                <th class="border-b p-2">ID</th>
+                                <th class="border-b p-2">Tempo Restante</th>
+                                <th class="border-b p-2">Revendedor</th>
+                                <th class="border-b p-2">Tipo</th>
+                                <th class="border-b p-2">Expiração</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="p-2" colspan="6">Não foram encontrados resultados</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="flex justify-between items-center mt-4">
+                        <span>Mostrando de 0 até 0 de 0 registros</span>
+                        <div>
+                            <button class="p-2 border rounded"> < </button>
+                            <button class="p-2 border rounded"> > </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h2 class="text-gray-600 mb-4">Estatísticas do Mês</h2>
+                    <div class="flex justify-end mb-4">
+                        <button class="p-2 border rounded text-gray-500">
+                            <i class="fas fa-calendar-alt"></i> Filtrar mês
+                        </button>
+                    </div>
+                    <div>
+                        <canvas id="chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed bottom-4 right-4">
+                <button class="bg-blue-500 text-white p-4 rounded-full shadow-lg">
+                    <i class="fas fa-comments"></i> Suporte Online
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('chart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                datasets: [{
+                    label: 'Novos Usuários',
+                    borderColor: 'black',
+                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+                }, {
+                    label: 'Novos Testes',
+                    borderColor: 'orange',
+                    data: [0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0]
+                }]
+            },
+            options: {}
+        });
+    </script>
+</body>
+</html>
