@@ -7,7 +7,7 @@
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
     <div class="flex">
         <!-- Sidebar -->
-        <div class="w-64 bg-gray-900 h-screen">
+        <div id="sidebar" class="bg-gray-900 h-screen w-64 transition-transform transform -translate-x-full md:translate-x-0">
             <div class="p-4">
                 <div class="text-white text-2xl font-bold mb-4">PAINEL</div>
                 <nav class="text-gray-300">
@@ -77,9 +77,14 @@
             </div>
         </div>
         <!-- Main Content -->
-        <div class="flex-1 p-6">
-            <h1 class="text-3xl font-bold mb-6">Dashboard</h1>
-            <div class="grid grid-cols-4 gap-6 mb-6">
+        <div id="main-content" class="flex-1 p-6 transition-all duration-300">
+            <div class="flex items-center justify-between mb-4">
+                <h1 class="text-3xl font-bold">Dashboard</h1>
+                <button id="menu-button" class="md:hidden text-white bg-blue-500 p-2 rounded">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
                 <div class="bg-white p-4 rounded-lg shadow">
                     <div class="flex items-center">
                         <div class="flex-1">
@@ -125,7 +130,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-6 mb-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div class="bg-white p-4 rounded-lg shadow">
                     <h2 class="text-gray-600 mb-4">DNS do Servidor</h2>
                     <div class="flex items-center">
@@ -145,7 +150,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-2 gap-6 mb-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div class="bg-white p-4 rounded-lg shadow">
                     <h2 class="text-gray-600 mb-4">Linhas a Expirar</h2>
                     <div class="flex items-center mb-4">
@@ -197,6 +202,14 @@
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById('menu-button').onclick = function() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('-translate-x-full');
+            const mainContent = document.getElementById('main-content');
+            mainContent.classList.toggle('md:pl-64'); // Adiciona padding left quando a sidebar estiver visível
+        };
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         var ctx = document.getElementById('chart').getContext('2d');
